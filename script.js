@@ -11,12 +11,18 @@ const perguntas = [
         alternativas: [
             {
                 texto: "sim, acho que estudar é importante!",
-                afirmacao: "Estudar ajuda a abrir a mente, a superar limitações e a desenvolver uma visão mais flexível. Além disso, ajuda a aprimorar habilidades, como capacidade de resolução de problemas, disciplina e responsabilidade.",
+                afirmacao: [
+                 "Estudar ajuda a abrir a mente, a superar limitações e a desenvolver uma visão mais flexível. Além disso, ajuda a aprimorar habilidades, como capacidade de resolução de problemas, disciplina e responsabilidade.",
+                " estuda auxilia pra um vida melhor"
+                ]
             },
             {
                 texto: "Não, acho uma perda de tempo.",
-                afirmacao: "Sinto muito que pense assim, pois os estudos são importantes. Com eles adquirimos conhecimentos, cultura, e traçamos objetivos na vida.",
-            },
+                afirmacao: [
+                    "Sinto muito que pense assim, pois os estudos são importantes. Com eles adquirimos conhecimentos, cultura, e traçamos objetivos na vida.",
+                    " "               
+                ]
+                },
         ],
     },
     {
@@ -24,12 +30,18 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Sim, estou satisfeito com o ensino.",
-                afirmacao: "Que bom! O ensino oferece educação de qualidade, formando cidadãos com amplos conhecimentos humanísticos, científicos e tecnológicos , que potencializam suas competências pessoais e profissionais mediante os desafios do mundo do trabalho e do exercício efetivo da cidadania.",
-            },
+                afirmacao: [
+                    "Que bom! O ensino oferece educação de qualidade, formando cidadãos com amplos conhecimentos humanísticos, científicos e tecnológicos , que potencializam suas competências pessoais e profissionais mediante os desafios do mundo do trabalho e do exercício efetivo da cidadania.",
+                    " "
+                ]
+                },
             {
                 texto: "Não, acredito que poderia ser melhor.",
-                afirmacao: "O Sistema Estadual de Ensino existe para otimizar todas as atividades escolares e oferecer a melhor experiência ao aluno. Com uma estrutura pedagógica completa, que abrange inclusive o material didático.",
-            },
+                afirmacao: [
+                    "O Sistema Estadual de Ensino existe para otimizar todas as atividades escolares e oferecer a melhor experiência ao aluno. Com uma estrutura pedagógica completa, que abrange inclusive o material didático.",
+                    " "
+                ]
+                },
         ],
     },
     {
@@ -37,7 +49,10 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Sim, acredito!",
-                afirmacao: "A concentração é uma habilidade fundamental que pode ser aprimorada através do hábito de estudar todos os dias. Quando você se dedica a sessões regulares de estudo, treina sua mente para se concentrar em uma única tarefa por um período prolongado.",
+                afirmacao: [
+                "A concentração é uma habilidade fundamental que pode ser aprimorada através do hábito de estudar todos os dias. Quando você se dedica a sessões regulares de estudo, treina sua mente para se concentrar em uma única tarefa por um período prolongado.",
+                " "
+            ]
             },
             {
                 texto: "Não, acho que não tem nenhuma ligação.",
@@ -50,11 +65,17 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Acho que estudar nunca é demais!",
-                afirmacao: "Estudar demais pode comprometer o seu aprendizado e até mesmo afetar a sua saúde. Ler, pesquisar e aprender obsessivamente pode fornecer uma falsa sensação de realização, sem que o conhecimento seja realmente incorporado e resulte em mais produtividade.",
-            },
+                afirmacao: [
+                    "Estudar demais pode comprometer o seu aprendizado e até mesmo afetar a sua saúde. Ler, pesquisar e aprender obsessivamente pode fornecer uma falsa sensação de realização, sem que o conhecimento seja realmente incorporado e resulte em mais produtividade.",
+                     " "
+                ]
+                },
             {
                 texto: "Acho que estudar muito ou pouco não muda.",
-                afirmacao: "É importante lembrar novamente que exagerar na quantidade de horas de estudo por dia pode causar exaustão e prejudicar seu desempenho durante a prova. Dessa forma, há uma média de quatro horas de estudo diário recomendada a fim de que você não se canse mentalmente.",
+                afirmacao: [
+                    "É importante lembrar novamente que exagerar na quantidade de horas de estudo por dia pode causar exaustão e prejudicar seu desempenho durante a prova. Dessa forma, há uma média de quatro horas de estudo diário recomendada a fim de que você não se canse mentalmente.",
+                    "  "
+            ]
             },
         ],
     },
@@ -97,7 +118,7 @@ function mostraAlternativas(){
 }
 
 function respostaSelecionada(opcaoSelecionada){
-     const afirmacoes = opcaoSelecionada.afirmacao;
+     const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
      historiaFinal += afirmacoes + " ";
      atual++;
      mostraPergunta();
@@ -110,7 +131,46 @@ function mostraResultado() {
     caixaAlternativas.textContent = "";
 }
 
+
+function aleatorio (lista){
+    const posicao = Math.floor(math.random()* lista.length);
+    return lista[posicao];
+}
 mostraPergunta();
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+      
+
 
 
 
