@@ -53,7 +53,6 @@ function jogaNovamente(){
     mostraPergunta();
 }
 
-}
 mostraPergunta();
 
 
