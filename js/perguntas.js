@@ -11,7 +11,7 @@ const perguntas = [
                 afirmacao: "Sinto muito que pense assim, pois os estudos são importantes. Com eles adquirimos conhecimentos, cultura, e traçamos objetivos na vida.",
             },
         ],
-        proximo: 1;
+        proximo: 1,
     },
     {
         enunciado: "Atualmente somente 4.3% dos municípios do Paraná tem Sistema Próprio de Ensino,  95.7% de seus municípios estão vinculados ao sistema estadual de ensino, no qual se compreende que escolas públicas e particulares, devem seguir as diretrizes do Conselho Estadual de Educação.  Você está satisfeito com o método de ensino?",

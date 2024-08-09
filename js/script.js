@@ -20,6 +20,10 @@ function iniciaJogo(){
     atual = 0
     historiaFinal = "";
     telaInicial.style.display = 'nome';
+    caixaPerguntas.classList.remove("mostrar");
+    caixaAlternativas.classList.remove("mostrar");
+    caixaResultado.classList.remove("mostrar");
+    mostraPergunta();
 }
 
 function mostraPergunta() {
@@ -77,7 +81,7 @@ function substituiNome(){
 }
 
 substituiNome();
-mostraPergunta();
+
 
 
 
